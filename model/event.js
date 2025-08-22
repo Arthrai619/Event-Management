@@ -26,6 +26,10 @@ const eventSchema = new mongoose.Schema({
     club:{
         type:mongoose.SchemaTypes.ObjectId,
         ref:"club"
+    },
+    participant:{
+        type: [mongoose.SchemaTypes.ObjectId],
+        ref: "user"
     }
 },{timestamps:true});
 
